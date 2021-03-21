@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Listentypen</title>
+</head>
+<body>
+    <h1>Die Ausgabe der Liste:</h1>
+    {% for eintrag in die_liste %}
+        <p>{{ eintrag }}</p>
+    {% endfor %}
+
+    <h1>Die Ausgabe des Wörterbuchs</h1>
+    {% for nachschlagewort, inhalt in das_woerterbuch.items %}
+        <p>{{ nachschlagewort }}  und enthält den Wert "{{ inhalt }}"</p>
+    {% endfor %}
+</body>
+</html>
