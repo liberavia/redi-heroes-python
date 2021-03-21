@@ -17,7 +17,8 @@ def start(request):
 
 def save_name(request):
     neuer_name = request.POST.get('eingabeName')
-    neuer_eintrag = Namensliste(name=neuer_name)
+    punkte = request.POST.get('eingabePunkte')
+    neuer_eintrag = Namensliste(name=neuer_name, punkte=punkte)
     neuer_eintrag.save()
 
 
