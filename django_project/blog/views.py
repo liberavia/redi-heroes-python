@@ -17,6 +17,7 @@ class PostListView(ListView):
     ordering = ['-date_posted']
     paginate_by = 2
 
+
 class UserPostListView(ListView):
     model = Post
     template_name = 'blog/posts_user.html'
@@ -66,6 +67,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         if self.request.user == post.author:
             return True
         return False
+
 
 def about(request):
     context = {
