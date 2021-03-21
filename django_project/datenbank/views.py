@@ -18,7 +18,11 @@ def start(request):
 def save_name(request):
     neuer_name = request.POST.get('eingabeName')
     punkte = request.POST.get('eingabePunkte')
-    neuer_eintrag = Namensliste(name=neuer_name, punkte=punkte)
+    neuer_eintrag = Namensliste.objects.filter(name=neuer_name).first()
+    if neuer_eintrag:
+        neuer_eintrag.punkte += int(punkte)
+    else:
+        neuer_eintrag = Namensliste(name=neuer_name, punkte=int(punkte))
     neuer_eintrag.save()
 
 
