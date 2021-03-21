@@ -34,6 +34,7 @@
                         {{ eintrag.punkte }}
                     </div>
                     <div class="col-sm">
+                        <a href="{% url 'datenbank-bearbeiten' eintrag.id %}" class="btn btn-outline-info">Bearbeiten</a>
                         <a href="{% url 'datenbank-loeschen' eintrag.id %}" class="btn btn-outline-danger">Löschen</a>
                     </div>
                 </div>

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Namensliste
-from django.views.generic import DeleteView
+from django.views.generic import DeleteView, UpdateView
 
 
 def start(request):
@@ -11,7 +11,6 @@ def start(request):
     context = {
         'namensliste': liste_namen
     }
-
     return render(request, 'datenbank/content.html', context)
 
 
@@ -29,3 +28,10 @@ def save_name(request):
 class DeleteNameView(DeleteView):
     model = Namensliste
     success_url = '/datenbank/'
+
+
+class UpdateNameView(UpdateView):
+    model = Namensliste
+    fields = ['name', 'punkte']
+    success_url = '/datenbank/'
+
