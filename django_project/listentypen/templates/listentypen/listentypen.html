@@ -14,10 +14,5 @@
     {% for nachschlagewort, inhalt in das_woerterbuch.items %}
         <p>{{ nachschlagewort }}  und enthält den Wert "{{ inhalt }}"</p>
     {% endfor %}
-
-    <h1>Die Ausgabe der Personen</h1>
-    {% for person in die_personen %}
-        <p>{{ person.name }} ist {{ person.alter }} Jahre alt.</p>
-    {% endfor %}
 </body>
 </html>
