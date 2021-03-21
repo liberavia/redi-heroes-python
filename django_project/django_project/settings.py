@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'datenbank.apps.DatenbankConfig',
     'listentypen.apps.ListentypenConfig',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
