@@ -23,7 +23,8 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('users/', include('users.urls')),
     path('listentypen/', include('listentypen.urls')),
-    path('datenbank/', include('datenbank.urls'))
+    path('datenbank/', include('datenbank.urls')),
+    path('neueapp/', include('neueapp.urls'))
 ]
 
 if settings.DEBUG:
