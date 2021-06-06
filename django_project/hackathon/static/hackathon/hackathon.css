@@ -5,7 +5,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #444444;
+  color: #47ff5d;
 }
 
 ul {
@@ -13,7 +13,7 @@ ul {
 }
 
 .leiste_hintergrund {
-  background-color: #781d67;
+  background-color: #47ff5d;
 }
 
 .site-header .navbar-nav .nav-link {
