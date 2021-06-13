@@ -4,6 +4,19 @@
         <h1>Über diese Seite</h1>
         <p>Erklärung zu dieser Seite</p>
         <h2>Kommentare</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <input id="eingabeAutor" name="eingabeAutor" class="form-control" type="text" placeholder="Name eingeben">
+            </div>
+            <div class="form-group">
+                <textarea id="eingabeKommentar" name="eingabeKommentar" class="form-control"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Kommentar senden</button>
+            </div>
+        </form>
+
         {% for kommentar in kommentare %}
             <div>
                 <h3>{{ kommentar.autor }}</h3>
