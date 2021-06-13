@@ -1,4 +1,14 @@
 {% extends "hackathon/base.html" %}
 {% block content %}
-    <h1>Über diese Seite</h1>
+    <div class="content-section">
+        <h1>Über diese Seite</h1>
+        <p>Erklärung zu dieser Seite</p>
+        <h2>Kommentare</h2>
+        {% for kommentar in kommentare %}
+            <div>
+                <h3>{{ kommentar.autor }}</h3>
+                <p>{{ kommentar.kommentar }}</p>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
