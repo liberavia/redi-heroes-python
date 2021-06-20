@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Kommentar, Charakter
 
-# Register your models here.
+admin.site.register(Kommentar)
+admin.site.register(Charakter)
