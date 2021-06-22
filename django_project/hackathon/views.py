@@ -1,9 +1,16 @@
 from django.shortcuts import render
-from .models import Kommentar
+from .models import Kommentar, Charakter
 
 
 def startseite(request):
-    return render(request, 'hackathon/startseite.html')
+    liste_familienmitglieder = Charakter.objects.filter(familie=True)
+    liste_sonstige = Charakter.objects.filter(familie=False)
+    context = {
+        'familienmitglieder': liste_familienmitglieder,
+        'sonstige_charaktere': liste_sonstige,
+    }
+
+    return render(request, 'hackathon/startseite.html', context)
 
 
 def speicher_kommentar(request):
